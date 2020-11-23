@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+
+        <div id="app">
+            Mon âge est {{ age }} ans
+        </div>
+
+
+
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    age: 20
+                },
+                mounted(){
+
+                    setInterval(this.oneMore,1000)
+
+                },
+                
+                methods:{
+
+                    oneMore(){
+                        this.age++
+                    }
+
+                },
+            })
+
+
+
+
+
+        </script>
+        
+
+    </body>
+    
+</hmtl>
